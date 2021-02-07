@@ -34,14 +34,14 @@ L.control.layers(baseMaps).addTo(map);
 // Retrieve the earthquake GeoJSON data.
 d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson").then(function(data) {
 
-// This function returns the style data for each of the earthquakes we plot on
-// the map. We pass the magnitude of the earthquake into two separate functions
-// to calculate the color and radius.
-function styleInfo(feature) {
+  // This function returns the style data for each of the earthquakes we plot on
+  // the map. We pass the magnitude of the earthquake into two separate functions
+  // to calculate the color and radius.
+  function styleInfo(feature) {
     return {
       opacity: 1,
       fillOpacity: 1,
-      fillColor: getColor(feature.properties.mag),
+      fillColor: "#ffae42",
       color: "#000000",
       radius: getRadius(feature.properties.mag),
       stroke: true,
